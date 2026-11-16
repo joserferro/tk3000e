@@ -53,7 +53,7 @@ BSC32=bscmake.exe
 # ADD BSC32 /nologo
 LINK32=link.exe
 # ADD BASE LINK32 kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib /nologo /subsystem:windows /machine:I386
-# ADD LINK32 advapi32.lib comctl32.lib comdlg32.lib ddraw.lib gdi32.lib kernel32.lib shell32.lib user32.lib winmm.lib dsound.lib ole32.lib dxguid.lib version.lib strmiids.lib zlib/release/zlib.lib /nologo /subsystem:windows /machine:I386
+# ADD LINK32 advapi32.lib comctl32.lib comdlg32.lib ddraw.lib gdi32.lib kernel32.lib shell32.lib user32.lib winmm.lib dsound.lib ole32.lib dxguid.lib version.lib /nologo /subsystem:windows /machine:I386
 
 !ELSEIF  "$(CFG)" == "TK3000e - Win32 Debug"
 
@@ -79,7 +79,7 @@ BSC32=bscmake.exe
 # ADD BSC32 /nologo
 LINK32=link.exe
 # ADD BASE LINK32 kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib /nologo /subsystem:windows /debug /machine:I386 /pdbtype:sept
-# ADD LINK32 advapi32.lib comctl32.lib comdlg32.lib ddraw.lib gdi32.lib kernel32.lib shell32.lib user32.lib winmm.lib dsound.lib ole32.lib dxguid.lib version.lib strmiids.lib zlib/debug/zlib.lib /nologo /subsystem:windows /debug /machine:I386 /pdbtype:sept
+# ADD LINK32 advapi32.lib comctl32.lib comdlg32.lib ddraw.lib gdi32.lib kernel32.lib shell32.lib user32.lib winmm.lib dsound.lib ole32.lib dxguid.lib version.lib /nologo /subsystem:windows /debug /machine:I386 /pdbtype:sept
 
 !ENDIF 
 
@@ -90,6 +90,10 @@ LINK32=link.exe
 # Begin Group "Source Files"
 
 # PROP Default_Filter "cpp;c;cxx;rc;def;r;odl;idl;hpj;bat"
+# Begin Source File
+
+SOURCE=src\AY8910.cpp
+# End Source File
 # Begin Source File
 
 SOURCE=src\cpu.cpp
@@ -104,7 +108,7 @@ SOURCE=src\disco.cpp
 # End Source File
 # Begin Source File
 
-SOURCE="src\disco_rigido.cpp"
+SOURCE=src\disco_rigido.cpp
 # End Source File
 # Begin Source File
 
@@ -120,10 +124,6 @@ SOURCE=src\impressora.cpp
 # End Source File
 # Begin Source File
 
-SOURCE=.\src\ioapi.cpp
-# End Source File
-# Begin Source File
-
 SOURCE=src\janela.cpp
 # End Source File
 # Begin Source File
@@ -133,6 +133,10 @@ SOURCE=src\joystick.cpp
 # Begin Source File
 
 SOURCE=src\memoria.cpp
+# End Source File
+# Begin Source File
+
+SOURCE=src\Mockingboard.cpp
 # End Source File
 # Begin Source File
 
@@ -152,11 +156,11 @@ SOURCE=src\serial.cpp
 # End Source File
 # Begin Source File
 
-SOURCE=.\src\som.cpp
+SOURCE=src\SoundCore.cpp
 # End Source File
 # Begin Source File
 
-SOURCE=.\src\som_nucleo.cpp
+SOURCE=src\Speaker.cpp
 # End Source File
 # Begin Source File
 
@@ -168,7 +172,7 @@ SOURCE=src\teclado.cpp
 # End Source File
 # Begin Source File
 
-SOURCE=.\src\timer.cpp
+SOURCE=src\timer.cpp
 # End Source File
 # Begin Source File
 
@@ -180,7 +184,7 @@ SOURCE=src\tkclock.cpp
 # End Source File
 # Begin Source File
 
-SOURCE=.\src\unzip.cpp
+SOURCE=src\utilitarios.cpp
 # End Source File
 # Begin Source File
 
@@ -192,12 +196,16 @@ SOURCE=src\z80emu.cpp
 # End Source File
 # Begin Source File
 
-SOURCE=.\src\zip.cpp
+SOURCE=src\z80io.cpp
 # End Source File
 # End Group
 # Begin Group "Header Files"
 
 # PROP Default_Filter "h;hpp;hxx;hm;inl"
+# Begin Source File
+
+SOURCE=src\AY8910.h
+# End Source File
 # Begin Source File
 
 SOURCE=src\cpu.h
@@ -212,11 +220,7 @@ SOURCE=src\disco.h
 # End Source File
 # Begin Source File
 
-SOURCE="src\disco_rigido.h"
-# End Source File
-# Begin Source File
-
-SOURCE=src\fabio.h
+SOURCE=src\disco_rigido.h
 # End Source File
 # Begin Source File
 
@@ -232,10 +236,6 @@ SOURCE=src\impressora.h
 # End Source File
 # Begin Source File
 
-SOURCE=.\src\ioapi.h
-# End Source File
-# Begin Source File
-
 SOURCE=src\janela.h
 # End Source File
 # Begin Source File
@@ -245,6 +245,10 @@ SOURCE=src\joystick.h
 # Begin Source File
 
 SOURCE=src\memoria.h
+# End Source File
+# Begin Source File
+
+SOURCE=src\mockingboard.h
 # End Source File
 # Begin Source File
 
@@ -264,11 +268,15 @@ SOURCE=src\serial.h
 # End Source File
 # Begin Source File
 
-SOURCE=.\src\som.h
+SOURCE=src\SoundCore.h
 # End Source File
 # Begin Source File
 
-SOURCE=.\src\som_nucleo.h
+SOURCE=src\Speaker.h
+# End Source File
+# Begin Source File
+
+SOURCE=src\SSI263Phonemes.h
 # End Source File
 # Begin Source File
 
@@ -284,7 +292,7 @@ SOURCE=src\teclado.h
 # End Source File
 # Begin Source File
 
-SOURCE=.\src\timer.h
+SOURCE=src\timer.h
 # End Source File
 # Begin Source File
 
@@ -296,7 +304,7 @@ SOURCE=src\tkclock.h
 # End Source File
 # Begin Source File
 
-SOURCE=.\src\unzip.h
+SOURCE=src\utilitarios.h
 # End Source File
 # Begin Source File
 
@@ -318,26 +326,6 @@ SOURCE=src\z80emu.h
 
 SOURCE=src\z80io.h
 # End Source File
-# Begin Source File
-
-SOURCE=.\src\zlib\zconf.h
-# End Source File
-# Begin Source File
-
-SOURCE=.\zlib\src\zconf.h
-# End Source File
-# Begin Source File
-
-SOURCE=.\src\zip.h
-# End Source File
-# Begin Source File
-
-SOURCE=.\src\zlib\zlib.h
-# End Source File
-# Begin Source File
-
-SOURCE=.\zlib\src\zlib.h
-# End Source File
 # End Group
 # Begin Group "Resource Files"
 
@@ -353,10 +341,6 @@ SOURCE=.\recursos\CapsOn.bmp
 # Begin Source File
 
 SOURCE=.\recursos\CHARSET.bmp
-# End Source File
-# Begin Source File
-
-SOURCE=.\recursos\Charset4.bmp
 # End Source File
 # Begin Source File
 

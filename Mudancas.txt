@@ -1,3 +1,30 @@
+Mudanças na versão 2.5:
+
+ - Implementada a Fita K7 com arquivos WAV (menu "Fita K7"):
+   LOAD (ler fita), SAVE (gravar fita), Pausar/continuar, Rebobinar
+   e Parar fita.
+ - Indicador K7 na barra de status: verde escuro (sem atividade),
+   amarelo (fita pronta aguardando), verde claro (lendo) e vermelho
+   (gravando), com contador de 000 a 999 estilo gravador.
+ - Enquanto o motor do disco está ligado a fita fica parada (o disco em
+   velocidade máxima gasta mais tempo emulado que um Apple real); permite
+   carregar fitas "diskserver" que gravam o disco entre os blocos.
+ - Opção "Inverter polaridade do sinal" no menu Fita K7: necessária para
+   fitas rápidas (diskserver) gravadas com a fase oposta, como o Burgertime
+   que formata o disco (Burgertime.nof.wav). Quando ligada, o indicador K7
+   mostra "(inv)" ao lado do contador.
+ - No reset (frio ou quente) a fita pára onde estava (use Pausar para
+   continuar ou Rebobinar); se estava gravando, o WAV é fechado.
+ - Pausa automática opcional (menu Fita K7, desligada por padrão): a fita
+   para sozinha depois de alguns segundos sem leitura e continua da mesma
+   posição no próximo LOAD.
+ - Leitura de WAV com o instante exato de cada transição (cruzamento por
+   zero com interpolação entre amostras): passam a funcionar também fitas
+   rápidas (carregadores com pulsos de 40 a 80 us).
+ - Conserto automático de falhas (dropouts) no tom piloto de WAVs.
+ - Retirada a dependência do DirectShow (dshow.h/strmiids.lib) e do zlib;
+   o temporizador agora usa uma thread própria.
+
 Mudanças na versão 2.4:
 
  - Implementado a opção "colar" texto da área de transferência, com a 

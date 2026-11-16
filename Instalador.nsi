@@ -8,7 +8,7 @@
 !define USAR_LICENCA
 
 !define NOME_PACOTE	"TK3000e"
-!define VERSAO		"2.4"
+!define VERSAO		"2.5"
 !define NOMESAIDA	"${NOME_PACOTE}-${VERSAO}-Instalador.exe"
 !define NOME_PRODUTO	"Emulador TK3000e para Windows versão ${VERSAO}"
 
