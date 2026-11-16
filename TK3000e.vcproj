@@ -75,7 +75,7 @@
 			/>
 			<Tool
 				Name="VCLinkerTool"
-				AdditionalDependencies="comctl32.lib winmm.lib dsound.lib dxguid.lib version.lib strmiids.lib"
+				AdditionalDependencies="comctl32.lib winmm.lib dsound.lib dxguid.lib version.lib"
 				OutputFile=".\Debug/TK3000e.exe"
 				LinkIncremental="2"
 				SuppressStartupBanner="true"
@@ -173,7 +173,7 @@
 			/>
 			<Tool
 				Name="VCLinkerTool"
-				AdditionalDependencies="comctl32.lib winmm.lib dsound.lib dxguid.lib version.lib strmiids.lib"
+				AdditionalDependencies="comctl32.lib winmm.lib dsound.lib dxguid.lib version.lib"
 				OutputFile=".\Release/TK3000e.exe"
 				LinkIncremental="1"
 				SuppressStartupBanner="true"

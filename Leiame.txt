@@ -29,7 +29,31 @@ BUGS:
 CONTATANDO O AUTOR:
   Favor enviar um e-mail para fbelavenuto@gmx.net
 
+FITA K7 (WAV):
+  O menu "Fita K7" lê e grava fitas cassete do Apple II em arquivos WAV.
+  - LOAD: escolhe o WAV a ser lido. Depois digite LOAD (Applesoft ou Integer
+    BASIC) no emulador; a fita começa a rodar no primeiro acesso à entrada
+    do cassete.
+  - SAVE: escolhe o WAV a ser gravado. Depois digite SAVE no emulador. O arquivo
+    é completado ao parar a fita (ou ao fechar o emulador).
+  - Pausar / continuar fita: congela a fita onde está e continua depois.
+  - Pausa automática: a fita para sozinha quando fica sem ser lida
+    (desligada por padrão).
+  - Rebobinar fita: volta ao começo. Parar fita: solta a fita (grava o WAV se
+    estava gravando). Um reset do micro pausa a fita onde estava.
+  - Inverter polaridade do sinal: algumas fitas rápidas (por exemplo os WAVs
+    "diskserver" do site asciiexpress.net) só funcionam com a fase invertida.
+    Se uma fita rápida dá CHKSUM ERROR logo no início, tente ligar esta opção.
+    Fitas comuns (Integer/Applesoft) não dependem dela. A escolha é guardada.
+  - Indicador K7 na barra de status: verde escuro (sem atividade), amarelo
+    (fita pronta aguardando), verde claro (lendo) e vermelho (gravando), com
+    contador de 000 a 999 (um por segundo). "(inv)" aparece quando a
+    polaridade está invertida.
+  - Enquanto o motor do disco está ligado a fita fica parada, para carregar
+    fitas que gravam o disco entre os blocos.
+
 COPYRIGHT:
   Copyright (C) 1994-96, Michael O'Brien. All rights reserved.
   Fábio Belavenuto - Copyright (C) 2004
   Copyright (C) 2003-2004 Tom Charlesworth
+  José R. Ferro - Copyright (C) 2026 (Fita K7, versão 2.5)

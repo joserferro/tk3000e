@@ -5,7 +5,7 @@ del /s *.o *.obj *.pdb *.exp *.ncb *.dcu *.dof *.opt *.pch *.plg *.idb *.~* *.sb
 set sz="C:\Program Files\7-Zip\7z.exe"
 
 set nomedist=TK3000e
-set version=2.4
+set version=2.5
 set exclude=Docs
 
 echo Criando Distribuicao
